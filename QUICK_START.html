@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeScraper Quick Reference Guide</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #2563eb; margin-bottom: 10px; border-bottom: 3px solid #2563eb; padding-bottom: 10px; }
+        h2 { color: #1e40af; margin-top: 30px; margin-bottom: 15px; }
+        h3 { color: #2563eb; margin: 15px 0 10px 0; }
+        p { color: #333; line-height: 1.6; margin-bottom: 10px; }
+        .feature { background: #f0f9ff; padding: 15px; border-left: 4px solid #2563eb; margin: 10px 0; border-radius: 5px; }
+        .features { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .feature-item { background: #f8f8f8; padding: 15px; border-radius: 5px; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background: #2563eb; color: white; }
+        tr:nth-child(even) { background: #f9f9f9; }
+        .highlight { background: #fff3cd; padding: 15px; border-radius: 5px; border-left: 4px solid #f59e0b; }
+        .section { margin: 30px 0; }
+        .button-style { display: inline-block; background: #2563eb; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin: 5px 5px 5px 0; }
+        .button-style:hover { background: #1e40af; }
+        ul, ol { margin: 10px 0 10px 20px; }
+        li { margin: 5px 0; }
+        .icon-box { display: inline-block; background: #2563eb; color: white; width: 40px; height: 40px; border-radius: 50%; text-align: center; line-height: 40px; margin-right: 10px; font-weight: bold; }
+        .contact-box { background: #e8f4f8; padding: 20px; border-radius: 8px; margin: 20px 0; }
+        @media (max-width: 640px) { .features { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📱 HomeScraper - Quick Reference Guide</h1>
+        <p><strong>Atlanta Affordable Housing Property Finder</strong></p>
+        <p><em>Your complete guide to using the HomeScraper dashboard</em></p>
+
+        <!-- Getting Started -->
+        <div class="section">
+            <h2>🚀 Getting Started</h2>
+            <p>HomeScraper monitors affordablehousing.com and automatically collects all single-family home listings in Atlanta, Georgia.</p>
+            
+            <h3>Access Your Dashboard</h3>
+            <div class="feature">
+                <strong>URL:</strong> https://yourdomain.com/homescraper/frontend/<br>
+                Bookmark this for easy access!
+            </div>
+
+            <h3>What Updates When</h3>
+            <table>
+                <tr>
+                    <th>What Updates</th>
+                    <th>How Often</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td>Property Listings</td>
+                    <td>Every Hour</td>
+                    <td>New properties added automatically</td>
+                </tr>
+                <tr>
+                    <td>Dashboard Stats</td>
+                    <td>Every 5 Minutes</td>
+                    <td>Total count, new listings, avg price</td>
+                </tr>
+                <tr>
+                    <td>Notifications</td>
+                    <td>Real-Time</td>
+                    <td>Immediately when new matches found</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Dashboard Overview -->
+        <div class="section">
+            <h2>📊 Dashboard Overview</h2>
+            
+            <h3>Top Statistics Cards</h3>
+            <div class="features">
+                <div class="feature-item">
+                    <span class="icon-box">🏠</span>
+                    <strong>Total Properties</strong><br>
+                    All listings found in Atlanta area
+                </div>
+                <div class="feature-item">
+                    <span class="icon-box">⭐</span>
+                    <strong>New Today</strong><br>
+                    Properties added in last 24 hours
+                </div>
+                <div class="feature-item">
+                    <span class="icon-box">💰</span>
+                    <strong>Avg Price</strong><br>
+                    Average price of all listings
+                </div>
+                <div class="feature-item">
+                    <span class="icon-box">🔔</span>
+                    <strong>Alerts</strong><br>
+                    Unread notifications for you
+                </div>
+            </div>
+        </div>
+
+        <!-- How to Search -->
+        <div class="section">
+            <h2>🔍 How to Search Properties</h2>
+            
+            <h3>Quick Search</h3>
+            <ol>
+                <li>Type in the search box at the top</li>
+                <li>Search by: address, neighborhood, or zip code</li>
+                <li>Results update instantly as you type</li>
+            </ol>
+
+            <h3>Advanced Filters (Left Sidebar)</h3>
+            <table>
+                <tr>
+                    <th>Filter</th>
+                    <th>What It Does</th>
+                    <th>How to Use</th>
+                </tr>
+                <tr>
+                    <td><strong>Price Range</strong></td>
+                    <td>Filter by min/max price</td>
+                    <td>Use sliders to set range</td>
+                </tr>
+                <tr>
+                    <td><strong>Bedrooms</strong></td>
+                    <td>Minimum number of beds</td>
+                    <td>Check desired number(s)</td>
+                </tr>
+                <tr>
+                    <td><strong>Status</strong></td>
+                    <td>Active or all listings</td>
+                    <td>Select from dropdown</td>
+                </tr>
+            </table>
+
+            <h3>Apply Filters</h3>
+            <ol>
+                <li>Set your desired filters</li>
+                <li>Click "Apply Filters" button</li>
+                <li>Results update to match your criteria</li>
+            </ol>
+        </div>
+
+        <!-- Property Details -->
+        <div class="section">
+            <h2>🏡 View Property Details</h2>
+            
+            <p>Each property card shows:</p>
+            <ul>
+                <li>📍 Full address</li>
+                <li>💰 Listing price</li>
+                <li>🛏️ Number of bedrooms</li>
+                <li>🚿 Number of bathrooms</li>
+                <li>📏 Square footage</li>
+                <li>🖼️ Property image</li>
+            </ul>
+
+            <h3>Get More Information</h3>
+            <ol>
+                <li>Click on any property card</li>
+                <li>Full details open in a popup window</li>
+                <li>View phone number to contact landlord/agent</li>
+                <li>Click "View Original" to see listing on original website</li>
+            </ol>
+
+            <h3>Quick Actions on Each Card</h3>
+            <ul>
+                <li><strong>👁️ View Details</strong> - See full information</li>
+                <li><strong>📞 Call</strong> - Dial phone number directly</li>
+                <li><strong>🔗 Visit Listing</strong> - Go to original website</li>
+            </ul>
+        </div>
+
+        <!-- Switching Views -->
+        <div class="section">
+            <h2>📋 Change View Preference</h2>
+            
+            <p>Click the view toggle in the top right:</p>
+            <ul>
+                <li><strong>Grid View</strong> (📊 icon) - See properties as cards (default)</li>
+                <li><strong>List View</strong> (📝 icon) - See properties as a vertical list</li>
+            </ul>
+            
+            <p>Choose whichever view you prefer for easier browsing!</p>
+        </div>
+
+        <!-- Export Data -->
+        <div class="section">
+            <h2>📥 Download Data to Spreadsheet</h2>
+            
+            <h3>Export as CSV</h3>
+            <ol>
+                <li>Click "Export CSV" button in left sidebar</li>
+                <li>File downloads to your computer</li>
+                <li>Open with Excel, Google Sheets, or Numbers</li>
+            </ol>
+
+            <h3>What's Included in Export</h3>
+            <ul>
+                <li>Full address</li>
+                <li>Phone number</li>
+                <li>Price</li>
+                <li>Bedrooms & bathrooms</li>
+                <li>Square footage</li>
+                <li>Property type</li>
+                <li>Link to original listing</li>
+                <li>Date scraped</li>
+            </ul>
+
+            <div class="feature">
+                <strong>💡 Tip:</strong> Export weekly to track new listings and price changes
+            </div>
+        </div>
+
+        <!-- Notifications -->
+        <div class="section">
+            <h2>🔔 Notifications & Alerts</h2>
+            
+            <h3>How Notifications Work</h3>
+            <ul>
+                <li>Alerts appear when new matching properties are found</li>
+                <li>Notifications show in the "Alerts" section</li>
+                <li>Count displayed on the statistics card</li>
+            </ul>
+
+            <h3>Toast Notifications</h3>
+            <p>Brief messages appear at bottom right when:</p>
+            <ul>
+                <li>Properties loaded successfully ✅</li>
+                <li>Data exported ✅</li>
+                <li>Error occurs ❌</li>
+            </ul>
+
+            <div class="highlight">
+                <strong>📧 Email Alerts Coming Soon:</strong> Option to receive email notifications for new listings matching your criteria
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="section">
+            <h2>📄 Navigate Multiple Pages</h2>
+            
+            <p>When there are more than 20 properties:</p>
+            <ol>
+                <li>Use "Previous" & "Next" buttons at the bottom</li>
+                <li>Current page shows: "Page 1 of 5" (example)</li>
+                <li>Properties load as you navigate</li>
+            </ol>
+
+            <div class="feature">
+                <strong>💡 Tip:</strong> Each page shows 20 properties for faster loading
+            </div>
+        </div>
+
+        <!-- Refresh Data -->
+        <div class="section">
+            <h2>🔄 Refresh Your Data</h2>
+            
+            <h3>Automatic Refresh</h3>
+            <ul>
+                <li>Dashboard automatically refreshes every 5-10 minutes</li>
+                <li>New properties appear automatically</li>
+                <li>Statistics update in real-time</li>
+            </ul>
+
+            <h3>Manual Refresh</h3>
+            <ol>
+                <li>Click "Refresh Data" button in left sidebar</li>
+                <li>Loading spinner appears briefly</li>
+                <li>Latest properties load instantly</li>
+            </ol>
+        </div>
+
+        <!-- Mobile Access -->
+        <div class="section">
+            <h2>📱 Mobile Access</h2>
+            
+            <p>HomeScraper works perfectly on phones and tablets!</p>
+            
+            <h3>Mobile Features</h3>
+            <ul>
+                <li>Responsive design adapts to screen size</li>
+                <li>Touch-friendly buttons and filters</li>
+                <li>One-tap to call the property</li>
+                <li>Easy to read on small screens</li>
+            </ul>
+
+            <h3>Install as App (iPhone/Android)</h3>
+            <ol>
+                <li>Open dashboard in mobile browser</li>
+                <li>Tap "Share" button (iOS) or menu (Android)</li>
+                <li>Select "Add to Home Screen"</li>
+                <li>App icon appears on your home screen</li>
+                <li>Tap to open instantly next time</li>
+            </ol>
+        </div>
+
+        <!-- Troubleshooting -->
+        <div class="section">
+            <h2>⚠️ Troubleshooting</h2>
+            
+            <h3>Dashboard Won't Load</h3>
+            <ul>
+                <li>Check your internet connection</li>
+                <li>Try refreshing the page (F5)</li>
+                <li>Clear browser cache (Ctrl+Shift+Delete)</li>
+                <li>Try a different browser</li>
+            </ul>
+
+            <h3>Properties Not Showing</h3>
+            <ul>
+                <li>Click "Refresh Data" button</li>
+                <li>Wait 5-10 seconds for loading</li>
+                <li>Check that filters aren't too restrictive</li>
+                <li>Try clearing all filters</li>
+            </ul>
+
+            <h3>Can't Call a Property</h3>
+            <ul>
+                <li>Phone number may not be available</li>
+                <li>Try clicking "View Original" to see on main website</li>
+                <li>Some listings may have contact form instead</li>
+            </ul>
+
+            <h3>Export Not Working</h3>
+            <ul>
+                <li>Check pop-up settings in browser</li>
+                <li>Try a different browser</li>
+                <li>Ensure you have storage space on computer</li>
+                <li>File downloads to your "Downloads" folder</li>
+            </ul>
+        </div>
+
+        <!-- Tips & Tricks -->
+        <div class="section">
+            <h2>💡 Tips & Tricks</h2>
+            
+            <h3>Get the Most Out of HomeScraper</h3>
+            <ul>
+                <li>✅ Set up filters for your ideal property</li>
+                <li>✅ Check dashboard daily for new listings</li>
+                <li>✅ Export data weekly to track trends</li>
+                <li>✅ Use list view for comparing multiple properties</li>
+                <li>✅ Use grid view for quick browsing</li>
+                <li>✅ Search by neighborhood for area focus</li>
+                <li>✅ Filter by price to narrow results</li>
+                <li>✅ Check property details before calling</li>
+            </ul>
+
+            <h3>Saving Your Favorites</h3>
+            <ul>
+                <li>Use your browser's bookmark feature</li>
+                <li>Save property links in your notes</li>
+                <li>Export data to keep a spreadsheet</li>
+                <li>Take screenshots of properties you like</li>
+            </ul>
+        </div>
+
+        <!-- Features -->
+        <div class="section">
+            <h2>✨ All Features at a Glance</h2>
+            
+            <div class="features">
+                <div class="feature-item">
+                    <h3>🔍 Powerful Search</h3>
+                    Find properties by address, zip code, or neighborhood
+                </div>
+                <div class="feature-item">
+                    <h3>🎯 Smart Filters</h3>
+                    Filter by price, bedrooms, and status
+                </div>
+                <div class="feature-item">
+                    <h3>📊 Live Statistics</h3>
+                    Total count, new listings, avg price, alerts
+                </div>
+                <div class="feature-item">
+                    <h3>📞 Direct Contact</h3>
+                    Call landlords/agents with one tap
+                </div>
+                <div class="feature-item">
+                    <h3>📥 Export Data</h3>
+                    Download to Excel with all details
+                </div>
+                <div class="feature-item">
+                    <h3>🔄 Auto-Update</h3>
+                    New listings every hour automatically
+                </div>
+                <div class="feature-item">
+                    <h3>📱 Mobile Ready</h3>
+                    Works perfectly on phones & tablets
+                </div>
+                <div class="feature-item">
+                    <h3>🎨 Modern Design</h3>
+                    Beautiful interface with smooth animations
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact & Support -->
+        <div class="section">
+            <div class="contact-box">
+                <h2>📞 Need Help?</h2>
+                
+                <h3>For Technical Issues</h3>
+                <p>
+                    <strong>Email:</strong> support@yourdomain.com<br>
+                    <strong>Phone:</strong> [Your Number]<br>
+                    <strong>Hours:</strong> [Your Hours]<br>
+                    <strong>Response Time:</strong> Usually within 24 hours
+                </p>
+
+                <h3>For Questions About Properties</h3>
+                <p>
+                    Click "Call" on the property card or click "View Original" to contact the listing agent directly
+                </p>
+
+                <h3>For Feature Requests</h3>
+                <p>
+                    Email us your ideas! We're constantly improving HomeScraper
+                </p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="section" style="text-align: center; border-top: 1px solid #ddd; padding-top: 30px; margin-top: 40px;">
+            <h3>Ready to Find Your Perfect Home?</h3>
+            <p style="margin: 20px 0;">Start exploring Atlanta properties now!</p>
+            <a href="/homescraper/frontend/" class="button-style">Open Dashboard</a>
+            
+            <p style="margin-top: 30px; color: #999; font-size: 12px;">
+                HomeScraper © 2026 | All Rights Reserved<br>
+                Last Updated: February 28, 2026
+            </p>
+        </div>
+    </div>
+</body>
+</html>

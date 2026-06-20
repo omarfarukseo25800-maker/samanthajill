@@ -1,0 +1,18 @@
+<!-- Add this to the <head> section of index.html -->
+<meta name="manifest" link rel="manifest" href="/homescraper/manifest.json">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="HomeScraper">
+<link rel="apple-touch-icon" href="/homescraper/frontend/assets/icon-192.png">
+<meta name="theme-color" content="#2563eb">
+<meta name="description" content="Real-time scraping and monitoring of affordable housing listings in Atlanta, Georgia">
+
+<!-- Update index.html <head> to add this line -->
+<link rel="manifest" href="/homescraper/manifest.json">
+
+<!-- Update service worker registration in app.js to use: -->
+<!-- if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/homescraper/sw.js').catch(err => {
+        console.log('Service Worker registration failed:', err);
+    });
+} -->

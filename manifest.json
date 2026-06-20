@@ -1,0 +1,39 @@
+{
+  "name": "HomeScraper - Atlanta Property Finder",
+  "short_name": "HomeScraper",
+  "description": "Real-time scraping and monitoring of affordable housing listings in Atlanta, Georgia",
+  "start_url": "/homescraper/frontend/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/homescraper/frontend/assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/homescraper/frontend/assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/homescraper/frontend/assets/maskable-icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["real-estate", "shopping"],
+  "screenshots": [
+    {
+      "src": "/homescraper/frontend/assets/screenshot-1.png",
+      "sizes": "540x720",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ]
+}
